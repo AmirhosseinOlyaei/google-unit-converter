@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Mini Temp Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <h1 class="text-2xl m-4">Google Temperature Unit Converter</h1>
+
+    <div class="border w-[40rem] rounded-md ml-6">
+        <!-- Select a unit category to convert -->
+        <select name="units" id="unitSelect" class="bg-[#f8f9fa] border rounded-md w-3/4 m-4 text-sm py-1.5">
+            <option value="">Please choose an option</option>
+            <option value="Temperature" selected>Temperature</option>
+        </select>
+        <!-- Temperature unit convertor area -->
+        <div class="flex w-4/5">
+            <div class="flex flex-col m-4">
+                <!-- Fahrenheit to Celsius -->
+                <input type="number" value="32" id="inputFah"
+                    class="border w-full text-2xl text-center p-1.5 focus:outline-none">
+                <select name="units" id="unitSelected" class="bg-[#f8f9fa] border rounded-b-sm w-full text-sm py-1.5">
+                    <option value="Celsius">Degree Celsius</option>
+                    <option value="Fahrenheit" selected>Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            <div class="flex items-center text-2xl">=</div>
+            <div class="flex flex-col m-4">
+                <!-- Celsius to Fahrenheit -->
+                <input type="number" value="0" id="inputCel"
+                    class="border w-full text-2xl text-center p-1.5 focus:outline-none">
+                <select name="units" id="unitConverted" class="bg-[#f8f9fa] border rounded-b-sm w-full text-sm py-1.5">
+                    <option value="Celsius" selected>Degree Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <!-- Show results within its formula  -->
+            <p id="demo" class="m-4 text-sm"></p>
+            <p id="demo2" class="m-4 text-sm"></p>
+        </div>
+    </div>
+    <a href="#" class="ml-9"><small>More info</small></a>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
